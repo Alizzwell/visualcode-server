@@ -16,7 +16,10 @@
   "author": "baleian",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
     "mongoose": "^4.6.0"
   }

@@ -1,0 +1,162 @@
+{
+  "Chart": {
+    "lavel": "Chart",
+    "apis": [{
+      "name": "init",
+      "description": "Chart를 특정 size로 초기화시킨다.",
+      "params": [
+        {"name": "size", "description": "차트의 전체 사이즈"}
+      ]
+    },{
+      "name": "setData",
+      "description": "Chart에 데이터를 입력한다.",
+      "params": [
+        {"name": "index", "description": "데이터를 입력할 위치"},
+        {"name": "value", "description": "입력할 데이터 값"}
+      ]
+    }, {
+      "name": "highlight",
+      "description": "특정 위치를 하이라이트한다.",
+      "params": [{"name": "index", "description": "하이라이트할 위치"}]
+    }, {
+      "name": "unhighlight",
+      "description": "전체 또는 특정 위치의 하이라이트를 제거한다.",
+      "params": [{"name": "index", "description": "하이라이트 제거 위치", "optional": true}]
+    }, {
+      "name": "swap",
+      "description": "Chart의 두 위치를 swap한다.",
+      "params": [
+        {"name": "index1", "description": "swap할 위치 1"},
+        {"name": "index2", "description": "swap할 위치 2"}
+      ]
+    }, {
+      "name": "clear",
+      "description": "Chart 데이터를 제거한다.",
+      "params": []
+    }
+  ]
+  },
+
+  "Array": {
+    "lavel": "Array",
+    "apis": []
+  },
+
+  "Stack": {
+    "lavel": "Stack",
+    "apis": [{
+      "name": "push",
+      "description": "Stack에 데이터를 삽입한다..",
+      "params": [
+        {"name": "value", "description": "삽입할 데이터 값"}
+      ]
+    }, {
+      "name": "pop",
+      "description": "Stack에서 데이터를 제거한다.",
+      "params": []
+    }, {
+      "name": "clear",
+      "description": "Stack을 비운다.",
+      "params": []
+    }]
+  },
+
+  "Queue": {
+    "lavel": "Queue",
+    "apis": [{
+      "name": "inqueue",
+      "description": "Queue에 데이터를 삽입한다.",
+      "params": [
+        {"name": "value", "description": "삽입할 데이터 값"}
+      ]
+    }, {
+      "name": "dequeue",
+      "description": "Queue에서 데이터를 제거한다.",
+      "params": []
+    }, {
+      "name": "clear",
+      "description": "Queue를 비운다.",
+      "params": []
+    }]
+  },
+
+  "Graph": {
+    "lavel": "Graph",
+    "apis": [{
+      "name": "makeNode",
+      "description": "그래프에 새로운 노드를 생성한다.",
+      "params": [
+        {"name": "id", "description": "노드의 id"}, 
+        {"name": "lavel", "description": "노드에 입력할 라벨", "optional": true}
+      ]
+    }, {
+      "name": "makeNodes",
+      "description": "그래프에 일련번호를 id로 하는 노드를 생성한다.",
+      "params": [
+        {"name": "number", "description": "생성할 노드 갯수"},
+        {"name": "id", "description": "일련번호 시작 id"}
+      ]
+    }, {
+      "name": "makeEdge",
+      "description": "두 노드를 연결하는 간선을 그린다.",
+      "params": [
+        {"name": "src", "description": "첫번째 노드의 id"}, 
+        {"name": "dest", "description": "두번째 노드의 id"}, 
+        {"name": "directed", "description": "true일 경우 src에서 dest로 화살표 연결", "optional": true}
+      ]
+    }, {
+      "name": "setLavel",
+      "description": "특정 노드에 라벨을 입력한다.",
+      "params": [
+        {"name": "id", "description": "라벨을 입력할 노드의 id"},
+        {"name": "lavel", "description": "노드에 입력할 라벨"}
+      ]
+    }, {
+      "name": "highlightNode",
+      "description": "특정 노드에 하이라이트한다.",
+      "params": [{"name": "id", "description": "하이라이트할 노드의 id"}]
+    }, {
+      "name": "highlightEdge",
+      "description": "특정 간선에 하이라이트한다.",
+      "params": [
+        {"name": "src", "description": "하이라이트할 간선의 시작노드 id"}, 
+        {"name": "dest", "description": "하이라이트할 간선의 끝노드 id"}
+      ]
+    }, {
+      "name": "clearHighlight",
+      "description": "모든 하이라이트를 지운다.",
+      "params": []
+    }, {
+      "name": "clear",
+      "description": "그래프를 지운다.",
+      "params": []
+    }]
+  },
+
+  "LinkedList": {
+    "lavel": "Linked List",
+    "apis": []  
+  },
+
+  "Tree": {  
+    "lavel": "Tree",
+    "apis": [{
+      "name": "addChild",
+      "description": "부모노드와 자식노드를 생성하고 연결한다.",
+      "params": [
+        {"name": "parent", "description": "부모 노드의 id"},
+        {"name": "child", "description": "자식 노드의 id"}
+      ]
+    }, {
+      "name": "highlight",
+      "description": "특정 노드를 하이라이트한다.",
+      "params": [
+        {"name": "id", "description": "하이라이트할 노드의 id"}
+      ]
+    }, {
+      "name": "clear",
+      "description": "Tree를 비운다.",
+      "params": []
+    }]
+  }
+}
